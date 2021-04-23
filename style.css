@@ -1,0 +1,96 @@
+*{
+margin: 0;
+padding: 0;
+outline: none;
+text-decoration: none;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #222;
+}
+:root{
+  --red:crimson;
+
+}
+*::selection{
+  background: var(--red);
+}
+.continer{
+  width: 350px;
+  height: 100px;
+  background-color: #555;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: inset 2px 9px 3px #4444,
+               inset 0 4px 2px #1111,
+               inset 0 6px 2px #666,
+               inset 1px 7px 2px #1111;
+               
+}
+.continer ul{
+  position: relative;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.continer ul li{
+  transition: 1.7s padding;
+}
+.continer ul li a{
+  font-size: 45px;
+  height: 100px;
+  line-height: 100px;
+  color: #fff;
+  position: relative;
+  transition: 2s color padding ;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.continer ul li a .fa-facebook-f::after{
+content: '\00bb';
+position: absolute;
+font-size: 1px;
+right: -22px;
+color: #192a56;;
+opacity: 0;
+}
+.continer ul li a .fa-instagram::after{
+  content: '\00bb';
+  position: absolute;
+  font-size: 1px;
+  right: -22px;
+  color: #E1306C;
+  opacity: 0;
+}
+.continer ul li a .fa-github::after{
+  content: '\00bb';
+  position: absolute;
+  font-size: 1px;
+  right: -22px;
+  color:  #000;
+  opacity: 0;
+}
+.continer ul li:hover {
+padding-right: 25px;
+}
+.continer ul li a:hover i::after{
+  opacity: 1;
+  font-size: 30px;
+}
+.continer ul li a .fa-facebook-f:hover{
+  color: #192a56;
+}
+.continer ul li a .fa-instagram:hover{
+  color:#E1306C;
+}
+.continer ul li a  .fa-github:hover{
+  color: #000;
+}
+
+
+
